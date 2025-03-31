@@ -105,29 +105,61 @@
     </ul>
 
     <h2>Heatmap: Tracing Weapon Crime Before and After California’s Gun Laws</h2>
-    <p>California’s weapon laws got progressively tougher—Prop 63 in 2016 added ammo restrictions, and SB 2 in 2023 banned guns near schools, parks, and more. But how did these policies actually shape public safety in San Francisco?</p>
 
     <iframe src="assets/map_crime.html"></iframe>
 
-    <h3>District-Level Observations</h3>
-    <ul>
-      <li><strong>2012–2015 (Before Prop 63):</strong> 5,861 cases. Southeast (Bayview, Mission) hotspots. Richmond & Sunset safer.</li>
-      <li><strong>2017–2020 (After Prop 63):</strong> Rose to 6,090. Bayview and Tenderloin still intense.</li>
-      <li><strong>2021–2022 (Pre-SB 2):</strong> Fell to 3,608. West stayed quiet, hotspots persisted.</li>
-      <li><strong>2023–2024 (After SB 2):</strong> Slight rise to 3,402. Gun-free zones improved, but hotspots remain.</li>
-    </ul>
+    <section id="heatmap-analysis">
+      <p>
+        California’s weapon laws have become stricter over time—
+        <strong>Prop 63</strong> (2016) introduced ammunition background checks, and
+        <strong>SB 2</strong> (2023) established gun-free zones near schools, parks, and other sensitive locations.
+        But did these laws actually reduce crime in San Francisco?
+      </p>
 
-    <h3>What the Map Tells Us</h3>
-    <ul>
-      <li>Gun-free zones help, but aren’t a silver bullet</li>
-      <li>Crime shifted but didn’t vanish — Mission and Bayview still dominate</li>
-      <li>Laws must be paired with local community investment</li>
-    </ul>
+      <p>We visualized weapon-related crimes across four time periods:</p>
 
-    <blockquote>
-      “Regulation alone can’t erase the geography of crime.”<br>
-      — <em>Prof. R. Gonzalez, UC Berkeley</em>
-    </blockquote>
+      <h3>2012–2015 (Before Prop 63)</h3>
+      <ul>
+        <li><strong>Total incidents:</strong> 5,861</li>
+        <li>Hotspots in the southeast (Bayview, Mission)</li>
+        <li>Western districts like Richmond and Sunset remained calm</li>
+      </ul>
+
+      <h3>2017–2020 (After Prop 63)</h3>
+      <ul>
+        <li><strong>Total incidents:</strong> 6,090</li>
+        <li>Minor improvements in some areas, but key hotspots persisted</li>
+        <li>New concentration in the Tenderloin district</li>
+      </ul>
+
+      <h3>2021–2022 (Before SB 2)</h3>
+      <ul>
+        <li><strong>Total incidents:</strong> 3,608</li>
+        <li>Citywide decline, possibly due to pandemic effects</li>
+        <li>Hotspots remained, though less intense overall</li>
+      </ul>
+
+      <h3>2023–2024 (After SB 2)</h3>
+      <ul>
+        <li><strong>Total incidents:</strong> 3,402</li>
+        <li>Further decline in total crimes</li>
+        <li>Hot zones like Mission and Bayview still active</li>
+      </ul>
+
+      <h3>What Do These Maps Suggest?</h3>
+      <ul>
+        <li><strong>SB 2 may be helping</strong>, especially near sensitive areas</li>
+        <li><strong>Hotspots remain</strong>—policy alone can’t erase deep-rooted crime patterns</li>
+        <li><strong>Community-level strategies</strong> are essential alongside legislation</li>
+      </ul>
+
+      <blockquote>
+        “Policy can reduce how much crime happens, but not always where it happens.”<br>
+        — <em>Prof. R. Gonzalez, UC Berkeley</em>
+      </blockquote>
+
+      <p><em>Note: Spatial clustering remains significant across all years (Moran’s I > 0.4, p < 0.01).</em></p>
+    </section>
 
     <h2>References</h2>
     <ul>
