@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weapon Laws — Data Story</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      margin: 20px 0;
+    }
+    h1, h2, h3 {
+      margin-top: 2rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: gray;
+    }
+    /* Hide GitHub default menu if present */
+    .site-header, .site-footer, .site-title, .post-meta {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Weapon Laws — Data Story</h1>
+    <p><strong>02806 | Social Data Analysis and Visualization | Spring 25 | Group 22</strong></p>
+
+    <h2>🔎 Introduction</h2>
+    <p>This website explores weapon-related crimes in San Francisco (2008–2024), examining how crime levels shifted over time and in relation to new legislation like Proposition 63 and Senate Bill 2.</p>
+    <p><strong>Weapon Laws</strong> in crime data include:</p>
+    <ul>
+      <li>Possession of illegal weapons</li>
+      <li>Carrying weapons without permits</li>
+      <li>Violation of weapon regulations</li>
+      <li>Felon in possession of a firearm</li>
+      <li>Illegal firearm sales or transfers</li>
+    </ul>
+    <p>Note: These laws do <em>not</em> include weapon use in assault or robbery.</p>
+
+    <h2>📊 Story in Time: What Happened in These Years?</h2>
+    <p>Between 2008 and 2024, a total of <strong>25,703 Weapon Laws cases</strong> were recorded. The following dashboard allows you to explore total counts, trends, and seasonal patterns over time.</p>
+    <iframe src="assets/TimeSeries-1.html"></iframe>
+
+    <h2>🔥 Heatmap: Tracing Weapon Crime Before and After California’s Gun Laws</h2>
+    <p>California’s weapon laws got progressively tougher—Prop 63 in 2016 added ammo restrictions, and SB 2 in 2023 banned guns near schools, parks, and more. But how did these policies actually shape public safety in San Francisco?</p>
+
+    <p>We visualized weapon-related crime across four periods:</p>
+    <ul>
+      <li><strong>📍 2012–2015 (Before Prop 63)</strong><br>
+        A total of 5,861 cases, mostly concentrated in the southeast (Bayview, Mission).<br>
+        Western areas like Richmond and Sunset remained relatively safe.</li>
+
+      <li><strong>📍 2017–2020 (After Prop 63)</strong><br>
+        Despite the new law, crime increased to 6,090.<br>
+        While some southern districts saw minor drops, hotspots like Bayview and Tenderloin stayed intense.</li>
+
+      <li><strong>📍 2021–2022 (Pre-SB 2)</strong><br>
+        Incidents fell to 3,608, possibly due to pandemic-related shifts.<br>
+        Hot areas persisted, but western zones grew even quieter.</li>
+
+      <li><strong>📍 2023–2024 (After SB 2)</strong><br>
+        Slight rise to 3,402 cases, but spatial patterns shifted:<br>
+        Sensitive areas like parks and schools showed some reduction,<br>
+        yet hotspots remained, suggesting partial, not full, policy impact.</li>
+    </ul>
+
+    <iframe src="assets/map_crime.html"></iframe>
+
+    <h3>🔎 What the Map Tells Us</h3>
+    <ul>
+      <li>✅ Gun-free zones help, but aren’t a silver bullet</li>
+      <li>❗ Crime shifted but didn’t vanish—Mission and Bayview still dominate</li>
+      <li>⚖️ Policies must combine legal reform with community investment to target root causes</li>
+    </ul>
+    <blockquote>
+      “Regulation alone can’t erase the geography of crime.”<br>
+      — Prof. R. Gonzalez, UC Berkeley.
+    </blockquote>
+
+    <h2>📚 References</h2>
+    <ul>
+      <li><a href="https://selfhelp.courts.ca.gov/">https://selfhelp.courts.ca.gov/</a></li>
+      <li><a href="https://leginfo.legislature.ca.gov/">https://leginfo.legislature.ca.gov/</a></li>
+    </ul>
+
+    <h2>🤝 Contribution</h2>
+    <p><strong>Bokeh:</strong> Yu Zhang (s230000)<br>
+    <strong>Time Series:</strong> Shimin Huang (s242614)<br>
+    <strong>Heatmap:</strong> Yuling Zhai (s241613)</p>
+
+    <footer>
+      © 02806 | Social Data Analysis and Visualization | Spring 25 | Assignment 2
+    </footer>
+  </div>
+</body>
+</html>
 
