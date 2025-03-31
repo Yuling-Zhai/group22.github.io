@@ -44,11 +44,11 @@ iframe {
 
 # Weapon Laws – Data Story
 
-**02806 | Social Data Analysis and Visualization | Spring 25 | Group 22**
+** 02806 | Social Data Analysis and Visualization | Spring 25 | Group 22**
 
 ---
 
-## 🔎 Introduction
+## Introduction
 
 This website explores weapon-related crimes in San Francisco (2008–2024), analyzing how crime patterns evolved over time and how new gun control laws like Proposition 63 and SB 2 may have influenced public safety.
 
