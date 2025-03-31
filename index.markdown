@@ -4,7 +4,7 @@ title: Weapon Laws – Data Story
 ---
 
 <style>
-/* 居中容器 */
+/* Centered content container */
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -12,7 +12,7 @@ title: Weapon Laws – Data Story
   line-height: 1.6;
 }
 
-/* 隐藏 GitHub Pages 的默认导航栏等 */
+/* Hide Jekyll default theme elements */
 .site-header,
 .site-title,
 .site-nav,
@@ -23,7 +23,7 @@ ul.post-list,
   display: none !important;
 }
 
-/* 按钮样式 */
+/* Button styles */
 button {
   padding: 8px 14px;
   margin-right: 6px;
@@ -38,7 +38,7 @@ button:hover {
   background-color: #e2e2e2;
 }
 
-/* 图表统一尺寸 */
+/* Frame styling */
 iframe {
   width: 100%;
   height: 600px;
@@ -57,27 +57,30 @@ iframe {
 
 ## 🔎 Introduction
 
-This website explores weapon-related crimes in San Francisco (2008–2024), examining how crime levels shifted over time and in relation to new legislation like Proposition 63 and Senate Bill 2.
+This website explores weapon-related crimes in San Francisco (2008–2024), analyzing how crime patterns evolved over time and how new gun control laws like Proposition 63 and SB 2 may have influenced public safety.
 
-**Weapon Laws** in crime data include:
+In FBI UCR and most police datasets, **Weapon Laws** include:
 - Possession of illegal weapons  
 - Carrying weapons without permits  
+- Violation of weapon regulations  
 - Felon in possession of a firearm  
-- Illegal firearm sales or transfers
+- Illegal firearm sales or transfers  
 
-We ask: *Did gun control laws really reduce weapon-related crimes?*
+This does *not* include assault or robbery using a weapon — those are classified differently.
 
 ---
 
 ## 📊 Overview: Weapon Laws Among All the Crimes
 
-[📍 Your Bokeh chart will appear here later.]
+[📍 Your Bokeh chart will be embedded here.]
 
 ---
 
 ## 📅 Story in Time: What Happened in These Years?
 
-Between 2008–2024, a total of **25,703 Weapon Laws** cases were recorded. Explore the visualizations below:
+Between 2008 and 2024, a total of **25,703 Weapon Laws cases** were recorded.
+
+### 🔘 View the charts
 
 <div style="margin-bottom: 1rem;">
   <button onclick="showChart('TimeSeries-1')">Total Counts</button>
@@ -106,25 +109,38 @@ function showChart(id) {
 
 ## 🧠 Timeline: Law Impacts & Interpretations
 
-🔴 **2008–2011: Decrease** – AB962 restricted ammunition sales.  
-🔴 **2011–2012: Spike** – AB109 released prisoners.  
-🔴 **2012–2013: Rise** – Sandy Hook shooting.  
-🔴 **2014–2017: Rise** – Prop 47 reduced sentencing.  
-🔴 **2017: Drop** – Prop 63 restrictions began.  
-🔴 **2020–2021: Spike** – COVID and social unrest.  
-🔴 **2022–2024: Decline** – AB1594 gun industry liability.
+### 🔴 2008–2011: Continuous Decrease  
+AB962 limited ammo sales — weapon-related cases dropped gradually.
+
+### 🔴 2011–2012: Sudden Increase  
+AB109 released prisoners and indirectly increased weapon-related cases.
+
+### 🔴 2012–2013: Major Rise  
+Sandy Hook mass shooting may have triggered panic-related enforcement and reporting.
+
+### 🔴 2014–2017: Continued Increase  
+Prop 47 lowered penalties — possibly encouraging more violations.
+
+### 🔴 2017: Decline  
+Prop 63 restricted ammo and magazine sales — some drop observed.
+
+### 🔴 2020–2021: Sharp Rise  
+COVID-19, protests, and police focus shift likely influenced crime spikes.
+
+### 🔴 2022–2024: Noticeable Decline  
+AB1594 held gun manufacturers accountable — may have helped reduce crimes.
 
 ---
 
-## 🗺️ Heatmap: Did Gun Laws Make SF Safer?
+## 🗺️ Heatmap: Did Gun Laws Make San Francisco Safer?
 
 <iframe src="assets/map_crime.html"></iframe>
 
-🧭 **District Summary:**
+### 📍 District-level Insights
 
-- **2012–2015 (Before Prop 63):** Crime clustered in Bayview, Mission  
-- **2017–2020 (After Prop 63):** Total increased; Tenderloin hotspot  
-- **2023 (After SB 2):** Drop by 71%; safer around parks/schools
+- **2012–2015 (Before Prop 63):** Crime concentrated in Bayview & Mission  
+- **2017–2020 (After Prop 63):** Total cases rose; Tenderloin emerged as a new hotspot  
+- **2023 (After SB 2):** Big drop (−71%); parks and schools became much safer
 
 ---
 
