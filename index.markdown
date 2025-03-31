@@ -4,6 +4,26 @@ title: Weapon Laws – Data Story
 ---
 
 <style>
+/* 居中容器 */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* 隐藏 GitHub Pages 的默认导航栏等 */
+.site-header,
+.site-title,
+.site-nav,
+footer,
+h2.post-list-heading,
+ul.post-list,
+.post-meta {
+  display: none !important;
+}
+
+/* 按钮样式 */
 button {
   padding: 8px 14px;
   margin-right: 6px;
@@ -17,29 +37,35 @@ button {
 button:hover {
   background-color: #e2e2e2;
 }
+
+/* 图表统一尺寸 */
+iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  margin-bottom: 1.5rem;
+}
 </style>
+
+<div class="container">
 
 # Weapon Laws – Data Story
 
-*02806 | Social Data Analysis and Visualization | Spring 25 | Group 22*
+**02806 | Social Data Analysis and Visualization | Spring 25 | Group 22**
 
 ---
 
 ## 🔎 Introduction
 
-This website focuses on weapon-related crimes in San Francisco between 2008 and 2024.  
-It shows how these crimes have changed over the years, influenced by major events and new policies.  
-We also explore questions like: Have gun control policies really helped reduce weapon-related crimes?
+This website explores weapon-related crimes in San Francisco (2008–2024), examining how crime levels shifted over time and in relation to new legislation like Proposition 63 and Senate Bill 2.
 
-In the FBI UCR (Uniform Crime Reporting) system and most US police datasets like SFPD Crime Data,  
-**Weapon Laws** include:
+**Weapon Laws** in crime data include:
 - Possession of illegal weapons  
 - Carrying weapons without permits  
-- Violation of any statutory regulation of weapons  
 - Felon in possession of a firearm  
-- Illegal firearm sales or transfers  
+- Illegal firearm sales or transfers
 
-It is *not* about using the weapon to commit a robbery, assault, or murder — those are separately classified.
+We ask: *Did gun control laws really reduce weapon-related crimes?*
 
 ---
 
@@ -49,17 +75,9 @@ It is *not* about using the weapon to commit a robbery, assault, or murder — t
 
 ---
 
-## 🕒 Story in Time: What Happened in These Years?
+## 📅 Story in Time: What Happened in These Years?
 
-Between 2008 and 2024, a total of **25,703 Weapon Laws** cases were recorded.  
-The yearly proportions are shown in the **Total Counts**.
-
-**Yearly Trend** shows a line chart illustrating the annual changes.  
-**Monthly Counts** show monthly crime patterns per year.  
-**Seasonal Pattern** highlights trends by month (e.g., Halloween spikes).  
-**Hourly Trend** focuses on what time of day crimes peak.
-
-👇 Click the buttons to explore each visualization:
+Between 2008–2024, a total of **25,703 Weapon Laws** cases were recorded. Explore the visualizations below:
 
 <div style="margin-bottom: 1rem;">
   <button onclick="showChart('TimeSeries-1')">Total Counts</button>
@@ -69,11 +87,11 @@ The yearly proportions are shown in the **Total Counts**.
   <button onclick="showChart('TimeSeries-5')">Hourly Trend</button>
 </div>
 
-<iframe id="TimeSeries-1" src="assets/TimeSeries-1.html" width="100%" height="600px" style="border:none;"></iframe>
-<iframe id="TimeSeries-2" src="assets/TimeSeries-2.html" width="100%" height="600px" style="border:none; display:none;"></iframe>
-<iframe id="TimeSeries-3" src="assets/TimeSeries-3.html" width="100%" height="600px" style="border:none; display:none;"></iframe>
-<iframe id="TimeSeries-4" src="assets/TimeSeries-4.html" width="100%" height="600px" style="border:none; display:none;"></iframe>
-<iframe id="TimeSeries-5" src="assets/TimeSeries-5.html" width="100%" height="600px" style="border:none; display:none;"></iframe>
+<iframe id="TimeSeries-1" src="assets/TimeSeries-1.html"></iframe>
+<iframe id="TimeSeries-2" src="assets/TimeSeries-2.html" style="display:none;"></iframe>
+<iframe id="TimeSeries-3" src="assets/TimeSeries-3.html" style="display:none;"></iframe>
+<iframe id="TimeSeries-4" src="assets/TimeSeries-4.html" style="display:none;"></iframe>
+<iframe id="TimeSeries-5" src="assets/TimeSeries-5.html" style="display:none;"></iframe>
 
 <script>
 function showChart(id) {
@@ -86,57 +104,31 @@ function showChart(id) {
 
 ---
 
-## 🧠 Time Trend Analysis & Key Policy Events
+## 🧠 Timeline: Law Impacts & Interpretations
 
-🔴 **2008–2011: Continuous Decrease**  
-AB962 restricted ammunition sales → steady decline.  
-
-🔴 **2011–2012: Increase**  
-AB109 released prisoners → increased violations.
-
-🔴 **2012–2013: Significant Increase**  
-Sandy Hook shooting caused panic and rise in offenses.
-
-🔴 **2014–2017: Continued Increase**  
-Prop 47 lowered crime penalties → more violations.
-
-🔴 **2017: Decline**  
-Prop 63 restricted magazines → reduced cases.
-
-🔴 **2018–2019: Further Decline**  
-SB1100 raised gun purchase age → youth crimes dropped.
-
-🔴 **2020–2021: Sharp Increase**  
-COVID-19 → social unrest, nighttime spikes.
-
-🔴 **2022–2024: Decline**  
-AB1594 targeted gun industry → reduced sales-related crimes.
+🔴 **2008–2011: Decrease** – AB962 restricted ammunition sales.  
+🔴 **2011–2012: Spike** – AB109 released prisoners.  
+🔴 **2012–2013: Rise** – Sandy Hook shooting.  
+🔴 **2014–2017: Rise** – Prop 47 reduced sentencing.  
+🔴 **2017: Drop** – Prop 63 restrictions began.  
+🔴 **2020–2021: Spike** – COVID and social unrest.  
+🔴 **2022–2024: Decline** – AB1594 gun industry liability.
 
 ---
 
 ## 🗺️ Heatmap: Did Gun Laws Make SF Safer?
 
-<iframe src="assets/map_crime.html" width="100%" height="600px" style="border:none;"></iframe>
+<iframe src="assets/map_crime.html"></iframe>
 
-📌 **2012–2015 (Before Prop 63):**  
-Crimes concentrated in southeast areas (Bayview, Mission).
+🧭 **District Summary:**
 
-📌 **2017–2020 (After Prop 63):**  
-Numbers rose, Tenderloin became new hotspot.
-
-📌 **2023 (After SB 2):**  
-Clear improvement. Crimes near schools dropped 89%.
+- **2012–2015 (Before Prop 63):** Crime clustered in Bayview, Mission  
+- **2017–2020 (After Prop 63):** Total increased; Tenderloin hotspot  
+- **2023 (After SB 2):** Drop by 71%; safer around parks/schools
 
 ---
 
-## 🧾 Conclusion
-
-> “**Laws can reduce crime overall, but not always change where it happens.**”  
-> — *Prof. R. Gonzalez*
-
----
-
-## 📚 Reference
+## 📚 References
 
 - https://selfhelp.courts.ca.gov/  
 - https://ballotpedia.org/California_Proposition_63  
@@ -144,8 +136,10 @@ Clear improvement. Crimes near schools dropped 89%.
 
 ---
 
-## 🤝 Contribution
+## 🙌 Contribution
 
 **Bokeh:** Yu Zhang (s230000)  
 **Time Series:** Shimin Huang (s242614)  
-**Heatmap:** Yuling Zhai (s241613)
+**Heatmap:** Yulin Zhai (s241613)
+
+</div>
