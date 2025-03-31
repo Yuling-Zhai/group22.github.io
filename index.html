@@ -6,15 +6,19 @@
   <title>Weapon Laws — Data Story</title>
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+    .container {
       max-width: 900px;
       margin: 0 auto;
-      padding: 30px;
+      padding: 20px;
       line-height: 1.6;
     }
     h1, h2, h3 {
-      margin-top: 2em;
-      color: #222;
+      color: #111;
     }
     iframe {
       width: 100%;
@@ -22,72 +26,103 @@
       border: none;
       margin: 20px 0;
     }
-    .caption {
-      font-style: italic;
-      color: #555;
-      text-align: center;
-      margin-top: -10px;
-      margin-bottom: 30px;
+    button {
+      padding: 8px 16px;
+      margin: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: #f0f0f0;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #e2e2e2;
+    }
+    ul li {
+      margin-bottom: 10px;
     }
   </style>
 </head>
 
 <body>
-  <h1>Weapon Laws — Data Story</h1>
-  <p><strong>02806 | Social Data Analysis and Visualization | Spring 25 | Group 22</strong></p>
+  <div class="container">
 
-  <h2>Introduction</h2>
-  <p>This website explores weapon-related crimes in San Francisco (2008–2024), examining how crime levels shifted over time and in relation to new legislation like Proposition 63 and Senate Bill 2.</p>
-  <p><strong>Weapon Laws</strong> in crime data include:</p>
-  <ul>
-    <li>Possession of illegal weapons</li>
-    <li>Carrying weapons without permits</li>
-    <li>Violation of weapon regulations</li>
-    <li>Felon in possession of a firearm</li>
-    <li>Illegal firearm sales or transfers</li>
-  </ul>
+    <h1>Weapon Laws — Data Story</h1>
+    <p><em>02806 | Social Data Analysis and Visualization | Spring 25 | Group 22</em></p>
 
-  <h2>Story in Time: What Happened in These Years?</h2>
-  <p>Between 2008 and 2024, a total of <strong>25,703 Weapon Laws cases</strong> were recorded.</p>
+    <h2>Introduction</h2>
+    <p>
+      This website explores weapon-related crimes in San Francisco (2008–2024), examining how crime levels shifted over time and in relation to new legislation like Proposition 63 and Senate Bill 2.
+    </p>
+    <p><strong>Weapon Laws</strong> in crime data include:</p>
+    <ul>
+      <li>Possession of illegal weapons</li>
+      <li>Carrying weapons without permits</li>
+      <li>Violation of any statutory regulation of weapons</li>
+      <li>Felon in possession of a firearm</li>
+      <li>Illegal firearm sales or transfers</li>
+    </ul>
+    <p>Note: These laws do <em>not</em> include weapon use in assault or robbery.</p>
 
-  <!-- Replace with your actual time series HTML path -->
-  <iframe src="assets/TimeSeries-1.html"></iframe>
-  <p class="caption">Figure 1: Yearly trend of weapon-related crimes (2008–2024)</p>
+    <h2>Story in Time: What Happened in These Years?</h2>
+    <p>
+      Between 2008 and 2024, a total of <strong>25,703 Weapon Laws cases</strong> were recorded.  
+      The yearly proportions are shown in the <strong>Total Counts</strong>.
+    </p>
 
-  <h2>Heatmap: Tracing Weapon Crime Before and After California’s Gun Laws</h2>
-  <p>California’s weapon laws got progressively tougher—Prop 63 in 2016 added ammo restrictions, and SB 2 in 2023 banned guns near schools, parks, and more. But how did these policies actually shape public safety in San Francisco?</p>
-  <p>We visualized weapon-related crime across four periods:</p>
-  <ul>
-    <li><strong>📍 2012–2015 (Before Prop 63):</strong> 5,861 cases, mostly concentrated in Bayview and Mission</li>
-    <li><strong>📍 2017–2020 (After Prop 63):</strong> Crime rose to 6,090; hotspots persisted</li>
-    <li><strong>📍 2021–2022 (Pre-SB 2):</strong> Incidents dropped to 3,608; west side even quieter</li>
-    <li><strong>📍 2023–2024 (After SB 2):</strong> Slight rise to 3,402; hotspots remained</li>
-  </ul>
+    <p>
+      <strong>Yearly Trend</strong> shows a line chart illustrating the annual changes in the number of Weapon Laws cases.  
+      The red line represents the yearly fluctuations in case numbers, while the gray dashed lines indicate significant events that occurred at those points in time.  
+      You can view the event details by hovering the mouse over the top of the dashed line.  
+      Below the chart is the trend analysis, key events, and possible cause speculation.
+    </p>
 
-  <!-- Replace with your actual heatmap path -->
-  <iframe src="assets/map_crime.html"></iframe>
-  <p class="caption">Figure 2: Map of weapon-related crimes by district over time</p>
+    <p>
+      <strong>Monthly Counts</strong> illustrates the monthly distribution of Weapon Laws cases for each year, highlighting the high-incident months of that particular year in red.  
+      You can explore the monthly patterns across different years by adjusting the year slider.
+    </p>
 
-  <h2>🔎 What the Map Tells Us</h2>
-  <ul>
-    <li>✅ Gun-free zones help, but aren’t a silver bullet</li>
-    <li>❗ Crime shifted but didn’t vanish—Mission and Bayview still dominate</li>
-    <li>⚖️ Legal reform must pair with community action</li>
-  </ul>
+    <p>
+      <strong>Seasonal Pattern</strong> shows that January and October often record higher cases, possibly due to post-holiday instability, gang activities, or events like Halloween.  
+      Conversely, May to August tends to see fewer cases, likely linked to reduced youth gatherings and shifts in law enforcement focus during summer.
+    </p>
 
-  <blockquote><em>“Regulation alone can’t erase the geography of crime.” — Prof. R. Gonzalez, UC Berkeley</em></blockquote>
+    <p>
+      <strong>Hourly Trend</strong> reveals that weapon-related incidents concentrate from afternoon to late night, especially on Friday to Sunday evenings, driven by nightlife, alcohol, and gang conflicts.  
+      In contrast, early mornings show fewer cases due to lower activity levels. Some weekdays, like Wednesday evenings, also exhibit localized peaks, likely tied to specific group patterns.
+    </p>
 
-  <h2>📚 References</h2>
-  <ul>
-    <li><a href="https://selfhelp.courts.ca.gov/">https://selfhelp.courts.ca.gov/</a></li>
-    <li><a href="https://leginfo.legislature.ca.gov/">https://leginfo.legislature.ca.gov/</a></li>
-  </ul>
+    <!-- Buttons -->
+    <div style="text-align:center; margin-bottom: 20px;">
+      <button onclick="changeChart('TimeSeries-1.html')">Total Counts</button>
+      <button onclick="changeChart('TimeSeries-2.html')">Yearly Trend</button>
+      <button onclick="changeChart('TimeSeries-3.html')">Monthly Counts</button>
+      <button onclick="changeChart('TimeSeries-4.html')">Seasonal Pattern</button>
+      <button onclick="changeChart('TimeSeries-5.html')">Hourly Trend</button>
+    </div>
 
-  <h2>🤝 Contribution</h2>
-  <ul>
-    <li><strong>Bokeh:</strong> Yu Zhang (s230000)</li>
-    <li><strong>Time Series:</strong> Shimin Huang (s242614)</li>
-    <li><strong>Heatmap:</strong> Yuling Zhai (s241613)</li>
-  </ul>
+    <!-- Embedded Chart -->
+    <iframe id="chartFrame" src="assets/TimeSeries-1.html"></iframe>
+
+    <script>
+      function changeChart(file) {
+        document.getElementById("chartFrame").src = "assets/" + file;
+      }
+    </script>
+
+    <h3>What Do These Trends Reflect?</h3>
+    <ul>
+      <li>🔴 <strong>2008–2011: Continuous Decrease</strong><br>California AB962 restricted ammunition sales, probably leading to a steady decline in weapon law cases.</li>
+      <li>🔴 <strong>2011–2012: Increase</strong><br>AB 109 reduced prison populations, indirectly increasing weapon-related offenses.</li>
+      <li>🔴 <strong>2012–2013: Significant Increase</strong><br>Sandy Hook shooting triggered nationwide panic and a temporary rise in cases.</li>
+      <li>🔴 <strong>2014–2017: Continued Increase</strong><br>Prop 47 lowered penalties for certain crimes, increasing violations.</li>
+      <li>🔴 <strong>2017: Decline</strong><br>Prop 63 tightened ammo/magazine restrictions, reducing incidents.</li>
+      <li>🔴 <strong>2018–2019: Further Decline</strong><br>SB1100 raised gun purchase age to 21, lowering youth-related cases.</li>
+      <li>🔴 <strong>2020–2021: Sharp Increase</strong><br>COVID-19 and social unrest drove spikes in violations.</li>
+      <li>🔴 <strong>2021–2022: High Fluctuation</strong><br>Post-pandemic stress and gun sales caused instability.</li>
+      <li>🔴 <strong>2022–2024: Noticeable Decline</strong><br>AB1594 increased accountability in the gun industry.</li>
+    </ul>
+
+  </div>
 </body>
 </html>
