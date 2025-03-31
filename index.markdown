@@ -140,6 +140,6 @@ function showChart(id) {
 
 **Bokeh:** Yu Zhang (s230000)  
 **Time Series:** Shimin Huang (s242614)  
-**Heatmap:** Yulin Zhai (s241613)
+**Heatmap:** Yuling Zhai (s241613)
 
 </div>
